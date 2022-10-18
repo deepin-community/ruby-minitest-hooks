@@ -1,0 +1,33 @@
+Source: ruby-minitest-hooks
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Dmitry Borodaenko <angdraug@debian.org>
+Build-Depends: debhelper-compat (= 13),
+               gem2deb,
+               rake,
+               ruby-minitest,
+               ruby-minitest-global-expectations,
+               ruby-rspec,
+               ruby-sequel,
+               ruby-sqlite3
+Standards-Version: 4.5.1
+Vcs-Git: https://salsa.debian.org/ruby-team/ruby-minitest-hooks.git
+Vcs-Browser: https://salsa.debian.org/ruby-team/ruby-minitest-hooks
+Homepage: https://github.com/jeremyevans/minitest-hooks
+Testsuite: autopkgtest-pkg-ruby
+XS-Ruby-Versions: all
+Rules-Requires-Root: no
+
+Package: ruby-minitest-hooks
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ruby:any | ruby-interpreter,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: Around and before_all/after_all/around_all hooks for Minitest
+ minitest-hooks adds around and before_all/after_all/around_all hooks for
+ Minitest. This allows you do things like run each suite of specs inside a
+ database transaction, running each spec inside its own savepoint inside that
+ transaction, which can significantly speed up testing for specs that share
+ expensive database setup code.

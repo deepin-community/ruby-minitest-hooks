@@ -1,0 +1,19 @@
+From: Dmitry Borodaenko <angdraug@debian.org>
+Date: Thu, 11 Feb 2021 18:25:57 -0800
+Subject: minitest-global-expectations
+
+---
+ spec/helper.rb | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/spec/helper.rb b/spec/helper.rb
+index dcf46a4..fc489df 100644
+--- a/spec/helper.rb
++++ b/spec/helper.rb
+@@ -2,5 +2,5 @@ $:.unshift(File.join(File.dirname(File.expand_path(__FILE__)), "../lib/"))
+ require 'rubygems'
+ require 'sequel'
+ gem 'minitest'
+-require 'minitest/autorun'
++require 'minitest/global_expectations/autorun'
+ DATABASE_URL = ENV['DATABASE_URL'] || (defined?(JRUBY_VERSION) ? 'jdbc:sqlite::memory:' : 'sqlite:/')

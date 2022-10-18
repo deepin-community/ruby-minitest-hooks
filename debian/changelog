@@ -1,0 +1,43 @@
+ruby-minitest-hooks (1.5.0-2) unstable; urgency=medium
+
+  * A simpler solution for Minitest 6 warnings from upstream
+
+ -- Dmitry Borodaenko <angdraug@debian.org>  Thu, 11 Feb 2021 19:18:41 -0800
+
+ruby-minitest-hooks (1.5.0-1) unstable; urgency=medium
+
+  [ Cédric Boutillier ]
+  * Use https:// in Vcs-* fields
+  * Bump Standards-Version to 3.9.7 (no changes needed)
+  * Run wrap-and-sort on packaging files
+
+  [ Utkarsh Gupta ]
+  * Add salsa-ci.yml
+
+  [ Debian Janitor ]
+  * Use secure copyright file specification URI.
+  * Use secure URI in debian/watch.
+  * Use secure URI in Homepage field.
+  * Bump debhelper from old 9 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Update Vcs-* headers from URL redirect.
+  * Use canonical URL in Vcs-Git.
+  * Apply multi-arch hints.
+    + ruby-minitest-hooks: Add :all qualifier for ruby dependency.
+
+  [ Dmitry Borodaenko ]
+  * New upstream version 1.5.0.
+  * d/watch: Bump version to 4, update to gemwatch.debian.net.
+  * Bump debhelper to 13, Standards-Version to 4.5.1.
+  * Set Rules-Requires-Root to "no".
+  * Fix Minitest 6 deprecation warnings.
+
+ -- Dmitry Borodaenko <angdraug@debian.org>  Thu, 11 Feb 2021 16:01:39 -0800
+
+ruby-minitest-hooks (1.4.0-1) unstable; urgency=medium
+
+  * Initial release (Closes: #811335)
+
+ -- Dmitry Borodaenko <angdraug@debian.org>  Sun, 07 Feb 2016 16:24:07 -0800
